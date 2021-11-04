@@ -1,0 +1,35 @@
+*, :after, :before {
+ 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  
+}
+header{
+  display: flex;
+  align-items: center;
+ border-bottom: 1px solid;
+ 
+ 
+  
+  
+}
+
+
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    padding: 0.5rem;
+  }
+  .fa-android {
+    background: #a4c639;
+    color: white;
+    padding: 00.5rem;
+  }
+  footer{
+    border-top: 1px solid;
+  }
+  

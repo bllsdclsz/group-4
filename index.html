@@ -4,16 +4,46 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>CINEMATIQ</title>
-      <link rel="stylesheet" href="style.css">
+      <title>movie list</title>
+      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--change later-->
    </head>
    <body>
-      <header></header>
+      <header>
+         <a href="./index.html"> <img src="./image/111.png" alt="logo" width="150px" > </a>
+         <form>
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <button class="heder-sing-in">sing in</button>
+      </header>
       <main>
-        <h1>CINEMATIQ</h1>
+       <h1>movie list</h1>
+       <section class="card opacity-transition">
+         <img
+            src=""
+            alt="film"
+            class="opacity-transition"
+         />
+         <div class="card-description opacity-transition">
+            <div>
+               <p>Descreiption</p>
+               <input type="datetime-local" id="meeting-time" name="meeting-time">
+               <button>Book Now</button>
+            </div>
+            
+         </div>
+      </section>
       </main>
       <footer>
-
+      <div class="footer-link">
+        <a href="">About Us</a>
+       </div>
+       <div class="footer-link-icon">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-android"></a>
+      </div>
+      <p>The copyright symbol: &copy;</p>
       </footer>
    </body>
 </html>
