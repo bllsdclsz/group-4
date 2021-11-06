@@ -72,15 +72,21 @@ section img {
   border-radius: 1rem;
 }
 
-footer a {
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: #fff;
+.footer-link {
+  text-align: center;
+  margin-top: 4rem;
 }
 
-footer a:hover {
-  font-size: x-large;
+.footer-link a {
+  font-size: 2rem;
+  text-decoration: none;
   color: tomato;
+  display: block;
+}
+
+.footer-link a:hover {
+  font-size: x-large;
+  color: dodgerblue;
 }
 
 .description {
