@@ -19,14 +19,32 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--default-font-family);
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    rgb(255, 124, 0) 0%,
+    rgb(255, 124, 0) 15.9%,
+    rgb(255, 163, 77) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
+  );
 }
 
 h1 {
   font-family: var(--heading-font-family);
+  margin: 0 2rem 2rem;
+  font-size: 5rem;
+  text-align: center;
+  color: #fff;
+}
+
+p {
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
 }
 
 header {
-  background: khaki;
   display: flex;
   align-items: center;
   border-bottom: 1px solid;
@@ -36,15 +54,39 @@ header {
 header img {
   height: 100%;
   width: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 input,
 button {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   border: none;
   border-radius: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+section img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  border-radius: 1rem;
+}
+
+footer a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  font-size: x-large;
+  color: tomato;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .fa-facebook {
@@ -59,6 +101,10 @@ button {
   padding: 00.5rem;
 }
 
-footer {
-  border-top: 1px solid;
+.footer-lik,
+.footer-link-icon {
+  display: flex;
+  justify-content: right;
+  margin-right: 5rem;
+  gap: 3rem;
 }
