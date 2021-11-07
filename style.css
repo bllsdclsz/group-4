@@ -26,3 +26,12 @@ button {
 h1 {
    margin: 0;
 }
+
+main {
+   width: 100vw;
+   padding: 20px;
+}
+
+input {
+   margin-left: 20px;
+}

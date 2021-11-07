@@ -1,5 +1,5 @@
 let newEvent = {
-   summary: "Google I/O 2015",
+   summary: "Sample Event for CINEMAIQ",
    location: "800 Howard St., San Francisco, CA 94103",
    description: "A chance to hear more about Google's developer products.",
    start: {
