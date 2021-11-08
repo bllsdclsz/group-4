@@ -10,28 +10,28 @@ console.log(timeZone.split("").slice(0, timeZone.lastIndexOf(":")).join(""));
 console.log(currentDateTime.value);
 let image = document.querySelector("img");
 
-let movies = [];
+let movies;
 const addMovieButton = document.getElementById("add_event");
+let somthing = [1, 2, 3, 4];
+let movieList = document.querySelector(".movie_list");
 
-fetch("https://api.themoviedb.org/3/movie/popular?api_key=aadc24f1dd4399ac50c5f4c872dff158", {
-   method: "GET",
-   redirect: "follow",
-})
+fetch("https://api.themoviedb.org/3/movie/popular?api_key=aadc24f1dd4399ac50c5f4c872dff158")
    .then((response) => response.json())
    .then((data) => {
-      for (item of data.results) {
-         movies.push(item);
+      console.log(data.results);
+      movies = data.results;
+   })
+   .then(() => {
+      for (let movie of movies) {
+         createMovieCard(movie)
       }
-      image.src = `https://image.tmdb.org/t/p/original${movies[0].poster_path}`;
-      console.log(movies[0]);
-      return data;
    })
    .catch((err) => {
       console.error(err);
    });
 
 function createMovieCard(pMovie) {
-   return `<section class="card opacity-transition">
+   return (movieList.innerHTML += `<section class="card opacity-transition">
             <img
                src=https://image.tmdb.org/t/p/original${pMovie.poster_path}
                alt="film"
@@ -39,7 +39,7 @@ function createMovieCard(pMovie) {
             />
             <div class="card-description opacity-transition">
                <div class="description">
-                  <h3>${pMovie.title}</h3>
+                  <h2>${pMovie.title}</h2>
                   <p>${pMovie.overview}</p>
                   <input
                      type="datetime-local"
@@ -49,9 +49,9 @@ function createMovieCard(pMovie) {
                   <button type="button">Book Now</button>
                </div>
             </div>
-          </section>`;
+          </section>`);
 }
-
+console.log(somthing);
 console.log(movies);
 
 const addEvent = (pDateTime, pMovieTime) => {
