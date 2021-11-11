@@ -17,4 +17,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=aadc24f1dd4399ac50c5f4
    });
 
 
+   let dataLocation = document.querySelector("[data-location='Zurich']")
+
+
 
