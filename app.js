@@ -4,6 +4,8 @@ var API_KEY = "AIzaSyDfzx54qeLijDaDGTYUrjHINNw-r6LqCN0";
 // Array of API discovery doc URLs for APIs used by the quickstart
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 
+// const FREE_BUSY = "https://www.googleapis.com/calendar/v3/freeBusy"
+
 // Authorization scopes required by the API; multiple scopes can be
 // included, separated by spaces.
 var SCOPES = "https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar.events";
@@ -104,19 +106,23 @@ function listUpcomingEvents() {
       })
       .then(function (response) {
          var events = response.result.items;
+         console.log(events)
          appendPre("Upcoming events:");
-
          if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
                var event = events[i];
+               console.log(event)
                var when = event.start.dateTime;
                if (!when) {
                   when = event.start.date;
                }
-               appendPre(event.summary + " (" + when + ")");
+               appendPre(
+                  `${event.summary} ${new Date(when).toLocaleString()}`
+               );
             }
          } else {
             appendPre("No upcoming events found.");
          }
       });
 }
+
