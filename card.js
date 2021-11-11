@@ -16,7 +16,7 @@ function createMovieCard(pMovie) {
       name="meeting-time"
       required
       />
-      <button type="submit">Book Now</button>
+      <button type="submit" id="card-button">Book Now</button>
    </form>
    
    </div>
