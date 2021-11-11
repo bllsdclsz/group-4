@@ -5,28 +5,36 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>CINEMATIQ</title>
-      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="./style.css" />
    </head>
    <body>
       <header>
          <nav>
-            <h1>CINEMATIQ</h1>
+            <a href="./index.html">
+               <img src="./image/111.png" alt="logo" width="150px" />
+            </a>
+            <form>
+               <input type="text" placeholder="Search.." name="search" />
+               <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
             <button id="authorize_button" style="display: none">Sign In</button>
             <button id="signout_button" style="display: none">Sign Out</button>
          </nav>
       </header>
       <main>
-
-         <p>Google Calendar API Quickstart</p>
-
-      <!--Add buttons to initiate auth sequence and sign out-->
-
-      <pre id="content" style="white-space: pre-wrap"></pre>
-      <section class="movie_list">
-
-      </section>
+         <pre id="content" style="white-space: pre-wrap"></pre>
+         <section class="movie_list"></section>
       </main>
-      <footer></footer>
+      <footer>
+         <div class="footer-link">
+            <a href="">About Us</a>
+         </div>
+         <div class="footer-link-icon">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-android"></a>
+         </div>
+         <p>The copyright symbol: &copy;</p>
+      </footer>
 
       <script src="./event.js"></script>
       <script src="./card.js"></script>
