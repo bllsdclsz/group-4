@@ -132,11 +132,14 @@ header {
   width: 100%;
   align-items: center;
   border-bottom: 1px solid;
+  background-image: url("https://image.shutterstock.com/image-vector/old-cinema-background-vector-illustration-260nw-770497021.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
 }
 
-header img {
-  height: 100%;
-  width: auto;
+.logo-img{
+   width: 100px;
 }
 
 .footer-link {
