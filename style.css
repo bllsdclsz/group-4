@@ -71,7 +71,6 @@ img {
   border-radius: .5rem;
 }
 
-
 .movie_list {
    display: flex;
    justify-content: center;
@@ -189,4 +188,13 @@ header img {
   justify-content: right;
   margin-right: 5rem;
   gap: 3rem;
+}
+
+@media screen and (max-width:800px) {
+   .card-description p,
+   .card-description h2,
+   #meeting-time
+    {
+      display: none;
+   }
 }
