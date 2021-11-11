@@ -1,64 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Poppins:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <title>movie list</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!--change later-->
-  </head>
-  <body>
-    <header>
-      <a href="./index.html">
-        <img src="./image/111.png" alt="logo" width="150px" />
-      </a>
-      <form>
-        <input type="text" placeholder="Search.." name="search" />
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-      <button class="heder-sing-in">Sign in</button>
-    </header>
-    <main>
-      <h1>movie list</h1>
-      <section class="card opacity-transition">
-        <img
-          src="image/maxresdefault.jpg"
-          alt="film"
-          class="opacity-transition"
-        />
-        <div class="card-description opacity-transition">
-          <div class="description">
-            <p>Descreiption</p>
-            <input
-              type="datetime-local"
-              id="meeting-time"
-              name="meeting-time"
-            />
-            <button type="button">Book Now</button>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-link">
-        <a href="">About Us</a>
-      </div>
-      <div class="footer-link-icon">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-android"></a>
-      </div>
-      <p>The copyright symbol: &copy;</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>CINEMATIQ</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <header>
+         <nav>
+            <a href="./index.html">
+               <img src="./image/111.png" alt="logo" width="150px" />
+            </a>
+            <form>
+               <input type="text" placeholder="Search.." name="search" />
+               <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <button id="authorize_button" style="display: none">Sign In</button>
+            <button id="signout_button" style="display: none">Sign Out</button>
+         </nav>
+      </header>
+      <main>
+         <pre id="content" style="white-space: pre-wrap"></pre>
+         <section class="movie_list"></section>
+      </main>
+      <footer>
+         <div class="footer-link">
+            <a href="">About Us</a>
+         </div>
+         <div class="footer-link-icon">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-android"></a>
+         </div>
+         <p>The copyright symbol: &copy;</p>
+      </footer>
+
+      <script src="./event.js"></script>
+      <script src="./card.js"></script>
+      <script src="./movies.js"></script>
+      <script src="./app.js"></script>
+      <script
+         async
+         defer
+         src="https://apis.google.com/js/api.js"
+         onload="this.onload=function(){};handleClientLoad()"
+         onreadystatechange="if (this.readyState === 'complete') this.onload()"
+      ></script>
+   </body>
 </html>
