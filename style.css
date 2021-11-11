@@ -1,122 +1,4 @@
-<<<<<<< HEAD
-:root {
-  --heading-font-family: "Playfair Display SC", serif;
-  --default-font-family: "Poppins", sans-serif;
-}
 
-html {
-  box-sizing: border-box;
-  height: 100%;
-  font-size: 10px;
-}
-
-*,
-:after,
-:before {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--default-font-family);
-  background: radial-gradient(
-    circle at -8.9% 51.2%,
-    rgb(255, 124, 0) 0%,
-    rgb(255, 124, 0) 15.9%,
-    rgb(255, 163, 77) 15.9%,
-    rgb(255, 163, 77) 24.4%,
-    rgb(19, 30, 37) 24.5%,
-    rgb(19, 30, 37) 66%
-  );
-}
-
-h1 {
-  font-family: var(--heading-font-family);
-  margin: 0 2rem 2rem;
-  font-size: 5rem;
-  text-align: center;
-  color: #fff;
-}
-
-p {
-  font-size: 3rem;
-  text-align: center;
-  color: #fff;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid;
-  gap: 3rem;
-}
-
-header img {
-  height: 100%;
-  width: auto;
-}
-
-input,
-button {
-  padding: 2rem 3rem;
-  border: none;
-  border-radius: 1rem;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-section img {
-  display: block;
-  margin: 0 auto;
-  width: 90%;
-  border-radius: 1rem;
-}
-
-
-.footer-link {
-  text-align: center;
-  margin-top: 4rem;
-}
-
-.footer-link a {
-  font-size: 2rem;
-  text-decoration: none;
-  color: tomato;
-  display: block;
-}
-
-.footer-link a:hover {
-  font-size: x-large;
-  color: dodgerblue;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.fa-facebook {
-  background: #3b5998;
-  color: white;
-  padding: 0.5rem;
-}
-
-.fa-android {
-  background: #a4c639;
-  color: white;
-  padding: 00.5rem;
-}
-
-.footer-lik,
-.footer-link-icon {
-  display: flex;
-  justify-content: right;
-  margin-right: 5rem;
-  gap: 3rem;
-}
-=======
 :root {
    --heading-font-family: "Playfair Display SC", serif;
    --default-font-family: "Poppins", sans-serif;
@@ -175,6 +57,20 @@ img {
    height: 100%;
    transition: all 1s ease;
 }
+
+.search-bar
+{
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: .5rem;
+}
+
+.fa-search{
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: .5rem;
+}
+
 
 .movie_list {
    display: flex;
@@ -294,4 +190,3 @@ header img {
   margin-right: 5rem;
   gap: 3rem;
 }
->>>>>>> 57c621418841eedc962bcec3ef6889a83e9d6bb7
