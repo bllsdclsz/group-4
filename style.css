@@ -41,6 +41,10 @@ nav {
 button {
    padding: 5px 10px;
 }
+#search-icon{
+   padding: 2px;
+   
+}
 
 main {
    width: 100%;
@@ -171,8 +175,8 @@ header {
   padding: 00.5rem;
 }
 
-.footer-lik,
-.footer-link-icon {
+.footer-lik
+ {
   display: flex;
   justify-content: right;
   margin-right: 5rem;
