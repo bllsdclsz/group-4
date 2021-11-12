@@ -168,7 +168,7 @@ footer{
    background-position: center;
 }
 
-.footer {
+#footer {
    position: absolute;
    margin-top: 10px;
    width: 100%;

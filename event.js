@@ -60,16 +60,18 @@ const addEvent = (pDateTime, pMovieTime, pTitle) => {
 };
 
 function removeEvent(pEvent) {
-   let params = {
-      calendarId: 'primary',
-      eventId: pEvent.id
-   }
-   console.log(pEvent.id)
-   gapi.client.calendar.events.delete(params, () => {
-      if (err) {
-         console.log('The API returned an error: ' + err);
-         return;
-       }
-       console.log('Event deleted.');
-   })
+   gapi.client.load('calendar', 'v3', function() {
+      var request = gapi.client.calendar.events.delete({
+          'calendarId': 'primary',
+          'eventId': pEvent.id
+      });
+      request.execute(function(response) {
+          if(response.error || response == false){
+              alert('Error');
+          }
+          else{
+              alert('Success');               
+          }
+      });
+  });
 }
