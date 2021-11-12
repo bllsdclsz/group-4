@@ -26,6 +26,6 @@ function createMovieCard(pMovie) {
    const addMovieForm = document.getElementById("add_event");
    addMovieForm.addEventListener("submit", (event) => {
       event.preventDefault();
-      addEvent(currentDateTime.value, "02:00", pMovie.title);
+      addEvent(pMovie.poster_path, currentDateTime.value, "02:00", pMovie.title);
    });
 }

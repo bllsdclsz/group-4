@@ -1,4 +1,4 @@
-const addEvent = (pDateTime, pMovieTime, pTitle) => {
+const addEvent = (pPosterPath, pDateTime, pMovieTime, pTitle) => {
    let newEvent = {
       summary: `${pTitle}`,
       location: "800 Howard St., San Francisco, CA 94103",
@@ -20,6 +20,10 @@ const addEvent = (pDateTime, pMovieTime, pTitle) => {
             { method: "popup", minutes: 10 },
          ],
       },
+      attachments:[{
+         'fileUrl': `${pPosterPath}`,
+         'title': 'image url'
+      }]
    };
 
    let request = gapi.client.calendar.events.insert({
