@@ -7,7 +7,7 @@ function createMovieCard(pMovie) {
    />
    <div class="card-description opacity-transition">
    <div class="description">
-   <h2>${pMovie.title}</h2>
+   <h3>${pMovie.title}</h3>
    <p>${pMovie.overview}</p>
    <form id="add_event">
       <input
