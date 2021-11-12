@@ -60,5 +60,16 @@ const addEvent = (pDateTime, pMovieTime, pTitle) => {
 };
 
 function removeEvent(pEvent) {
-      gapi.client.calendar.events.delete('primary', pEvent.id).execute();
+   let params = {
+      calendarId: 'primary',
+      eventId: pEvent.id
+   }
+   console.log(pEvent.id)
+   gapi.client.calendar.events.delete(params, () => {
+      if (err) {
+         console.log('The API returned an error: ' + err);
+         return;
+       }
+       console.log('Event deleted.');
+   })
 }

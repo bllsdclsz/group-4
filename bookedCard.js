@@ -16,9 +16,12 @@ function createBookedMovie(pMovie, pDateTime) {
          <button type="button" id="delete-movie">Delete</button>
       </div>
    </section>`;
-   const deleteButton = document.querySelector("#delete-movie");
-   deleteButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      removeEvent(pMovie.id)
+   const deleteButtons = document.querySelectorAll("#delete-movie");
+   deleteButtons.forEach((deleteButton) => {
+      deleteButton.addEventListener("click", (event) => {
+         event.preventDefault();
+         console.log(pMovie)
+         removeEvent(pMovie)
+      })
    })
 }
