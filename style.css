@@ -44,6 +44,7 @@ nav {
 button {
    padding: 5px 10px;
 }
+
 #search-icon{
    padding: 2px;
    
@@ -160,6 +161,10 @@ header {
    width: 100px;
 }
 footer{
+   position: absolute;
+   margin-top: 10px;
+   width: 100%;
+   bottom: 0;
    border-top: 1px solid;
    background-image: url("https://image.shutterstock.com/image-vector/old-cinema-background-vector-illustration-260nw-770497021.jpg");
    background-size: cover;

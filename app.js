@@ -12,6 +12,7 @@ var SCOPES = "https://www.googleapis.com/auth/calendar.readonly https://www.goog
 
 var authorizeButton = document.getElementById("authorize_button");
 var signoutButton = document.getElementById("signout_button");
+let bookedMovieList = document.getElementById("booked-movie");
 
 /**
  *  On load, called to load the auth2 library and API client library.
@@ -107,7 +108,6 @@ function listUpcomingEvents() {
       .then(function (response) {
          var events = response.result.items;
          console.log(events)
-         appendPre("Upcoming events:");
          if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
                var event = events[i];
@@ -116,13 +116,10 @@ function listUpcomingEvents() {
                if (!when) {
                   when = event.start.date;
                }
-               appendPre(
-                  `${event.summary} ${new Date(when).toLocaleString()}`
-               );
+               createBookedMovie(event, when)
             }
          } else {
-            appendPre("No upcoming events found.");
+            bookedMovieList = "No upcoming events found.";
          }
       });
 }
-

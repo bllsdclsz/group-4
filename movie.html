@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./movie.css">
-</head>
-<body>
-    <main>
-      <img src="./image/1212.jpg"  class="img-second-page" alt="foto movie">
-      <section class="descreib-img">
-        <h1>name</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, labore. 
-            Inventore optio tempora commodi eligendi accusantium doloremque, ipsam 
-            distinctio ea nihil esse sint voluptates ipsa odit sit ut delectus aperiam.
-        </p>
-      </section>
-    </main>
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Poppins:wght@700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <title>Document</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <header>
+         <nav>
+            <a href="./index.html">
+               <img src="./image/14.png" class="logo-img" alt="logo" />
+            </a>
+            <a href="./index.html">Home</a>
+            <form>
+               <input type="text" placeholder="Search.." name="search" />
+               <button type="submit" id="search-icon"><i class="fa fa-search"></i></button>
+            </form>
+            <button id="authorize_button" style="display: none">Sign In</button>
+            <button id="signout_button" style="display: none">Sign Out</button>
+         </nav>
+      </header>
+      <main id="booked-movie">
+        
+      </main>
+      <footer>
+         <div class="footer-link-icon">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-android"></a>
+         </div>
+         <p>The copyright symbol: &copy;</p>
+      </footer>
+
+      <script src="./bookedCard.js"></script>
+      <script src="./event.js"></script>
+      <script src="./app.js"></script>
+      <script
+         async
+         defer
+         src="https://apis.google.com/js/api.js"
+         onload="this.onload=function(){};handleClientLoad()"
+         onreadystatechange="if (this.readyState === 'complete') this.onload()"
+      ></script>
+   </body>
 </html>

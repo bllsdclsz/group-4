@@ -45,17 +45,18 @@ const addEvent = (pDateTime, pMovieTime, pTitle) => {
                })
             ) {
                request.execute(function (event) {
-                  appendPre("Event created: " + event.htmlLink);
+                  createBookedMovie(event, event.start.dateTime);
                });
             } else {
                alert("You have a event this time you specified.");
             }
          } else {
             request.execute(function (event) {
-               appendPre("Event created: " + event.htmlLink);
+               createBookedMovie(event, event.start.dateTime);
             });
          }
       });
+      return newEvent;
 };
 
 function removeEvent(pEvent) {
